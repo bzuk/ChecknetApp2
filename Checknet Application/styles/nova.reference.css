@@ -2351,7 +2351,7 @@ div.km-split-horizontal>.km-content>.km-pane {
     position: absolute
 }
 .km-nova {
-    font: normal 1em "Helvetica Neue", "Helvetica", "Roboto Light", "Arial", "Verdana", "sans-serif";
+    font: normal 1em "Arial", "Helvetica Neue", "Helvetica", "Roboto Light", "Verdana", "sans-serif";
     line-height: 1.2
 }
 .km-nova h1 {

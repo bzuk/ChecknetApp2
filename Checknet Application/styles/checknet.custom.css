@@ -8,6 +8,10 @@
 * 
 */
 
+.km-nova {
+    font: normal 1em "Arial", "Helvetica Neue", "Helvetica", "Roboto Light", "Verdana", "sans-serif";
+    line-height: 1.2
+}
 /* CUSTOM FONTELLO CHECKNET FONT */
 
 @font-face {
@@ -80,10 +84,10 @@
     line-height: 1em;
     /* Animation center compensation - margins should be symmetric */
     /* remove if not needed */
-    
-    margin-left: .2em;
+    /* margin-left: .2em;*/
     /* you can be more comfortable with increased icons size */
-    /* font-size: 120%; */
+    
+    font-size: 115%;
     /* Font smoothing. That was taken from TWBS */
     
     -webkit-font-smoothing: antialiased;
@@ -91,9 +95,7 @@
     /* Uncomment for 3D effect */
     /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
-
 /* CUSTOM CHECKNET ICONS */
-.ck-red{color: #D52B1E;}
 
 .icon-alert:before {
     content: '\e800';
@@ -225,8 +227,67 @@
 }
 /* '' */
 
+/* Login */
+.input-white{background:#fff!important}
+.custom-right {
+    float: right;
+    margin-right:4em;
+}
 
+.icon-setting {
+    font-size: 150%;
+    color: #5E6A71;
+    float: left;
+    margin: .4rem 0 1.5rem 0
+}
+.icon-forgot {
+    color: #D52B1E!important;
+    float: right;
+    padding: 0!important;
+    border-radius: 0;
+    border-width: none!important;
+    border-style: none!important;
+    line-height: 0!important;
+    vertical-align: middle;
+    background:none!important
+}
 
+.km-nova .km-list>li {
+    font-size: 1.2em;
+    padding-left: .89em;
+    background: transparent;
+    border-radius: 0;
+    border-width: 1px 0 0;
+    border-style: solid;
+    line-height: 1.5em;
+    border-color:#9CA3A8;
+    padding: .84em .84em .84em .84em;
+}
+.km-nova .km-set-fix {
+    margin-right: 5rem;
+    font-size: .52em
+}
+.km-nova .km-listview-link::after, .km-nova .km-listview-label::after {border-color:#D52B1E}
+.km-nova .km-group-title {
+    background-color: rgb(233, 233, 233);
+    background-image: -webkit-gradient(linear, 50% 100%, 50% 0, color-stop(0, rgba(248, 248, 248, 0)), color-stop(1, rgba(248, 248, 248, .9)));
+    background-image: -moz-linear-gradient(50% 100%, 50% 0, rgba(248, 248, 248, 0), rgba(248, 248, 248, .9));
+    background-image: -ms-linear-gradient(50% 100%, 50% 0, rgba(248, 248, 248, 0), rgba(248, 248, 248, .9));
+    background-repeat: repeat;
+    background-position: 0 0;
+    border-color: #dee0e0;
+    color: #32364c;
+}
+.km-nova .km-group-title {
+    font-size: 1.2em;
+    position: -webkit-sticky;
+    text-indent: 0;
+    margin-top: 0;
+    font-weight: normal;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding: .42em .84em .39em;
+}
 .km-nova .password-button {
     float: right;
     background: none;
@@ -234,17 +295,31 @@
     font: 2em/2em;
     color: #D52B1E !important;
 }
+.km-nova h1,
+.km-nova h2,
+.km-nova h3,
+.km-nova h4,
+.km-nova h5,
+.km-nova h6,
+.km-nova p {
+    color: #111;
+}
+.km-nova .km-red {
+    color: #D52B1E
+}
 .km-nova .km-transparent.km-navbar,
 .km-nova .km-transparent.k-toolbar,
 .km-nova .km-transparent.km-tabstrip {
-    background: #5E6A71;
+    background: none;
     border: none;
 }
 .km-nova .km-content {
     color: #111111;
     background-color: #fff
 }
-
+/*.switch-fix {
+    margin:1rem;
+}*/
 /* accent primary red override */
 
 .km-nova .km-accent.km-navbar,
@@ -307,11 +382,10 @@
     right: .2em !important
 }
 .km-nova .km-collapsible-header {
-    height: 4.125em;
     line-height: 4.125em;
     padding: 0 2.4em 0 1.16em;
     font-size: 1.087em;
-    vertical-align:middle;
+    height: auto;
     background-color: rgb(102, 102, 102);
     background-image: -webkit-gradient(linear, 50% 100%, 50% 0, color-stop(0, rgba(146, 146, 146, 0)), color-stop(1, rgba(146, 146, 146, .9)));
     background-image: -moz-linear-gradient(50% 100%, 50% 0, rgba(146, 146, 146, 0), rgba(146, 146, 146, .9));
@@ -319,7 +393,6 @@
     background-repeat: repeat;
     background-position: 0 0;
 }
-
 .km-nova .km-collapsible-header h1,
 .km-nova .km-collapsible-header h2,
 .km-nova .km-collapsible-header h3,
@@ -328,12 +401,15 @@
 .km-nova .km-collapsible-header h6 {
     color: #ffffff;
     line-height: 1.2em;
+    padding: .8em 0 .8em 0;
 }
-
+.km-nova .km-collapsible-header .km-icon,
+.km-nova .km-expanded .km-collapsible-header .km-icon {
+    color: #ffffff;
+}
 .km-nova .km-collapsible-content {
     padding: 1em
 }
-
 .km-nova .km-collapsible-header h1 {
     line-height: 2.85em
 }
@@ -418,7 +494,7 @@
 /* list  overrides */
 
 .km-nova .km-list>li>.km-listview-link .km-icon {
-    color: #5E6A71
+    color: #5E6A71;
 }
 .km-nova .km-no-border>li {
     border-width: none;

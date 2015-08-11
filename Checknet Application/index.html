@@ -45,22 +45,23 @@
         <img src="styles/images/Checknet-Logo.png" style="width: 14em; height: 4.5em; margin: .5em auto 1.5em; display: block; float: none;" />
         <form>
             <ul kendo-mobile-list-view k-style="'inset'" class="km-grey-box">
-                <li> <span>Remember Me</span>
+                <li> <span class="custom-right"><p>Remember Me</p></span>
                     <input kendo-mobile-switch k-id="email-switch" k-checked="checked" />
                 </li>
-                <li>
+                <li class="input-white">
                     <label class=" km-state-active km-label-above">Username
                         <input value="BrandonZ76" type="text" />
                     </label>
                 </li>
-                <li>
+                <li class="input-white">
+                    <kendo-mobile-button class="check-icon icon-help icon-forgot" data-rel="modalview" onclick="focusTextbox()" href="#modalview-password" id="modalview-open-button"></kendo-mobile-button>
                     <label class="km-label-above">Password
+                        
                         <input value="Password123" type="password" />
-                        <kendo-mobile-button k-icon="'check-icon icon-password'" class="password-button" data-rel="modalview" href="#modalview-password" id="modalview-open-button"></kendo-mobile-button>
                     </label>
                 </li>
                 <li>
-                     <p><a href="#">Show Password Hint</a></p>
+                     <p class="custom-right"><a href="#">Show Password Hint</a></p>
                     
                 </li>
                 <li>
@@ -81,9 +82,9 @@
                         Please enter your email address to receive a new password.
                     </p>
                 </li>
-                <li>
+                <li class="input-white">
                     <label class=" km-state-active km-label-above">Email
-                        <input value="your@email.com" type="text" />
+                        <input id="input" value="your@email.com" type="text" />
                     </label>
                 </li>
                 <li>

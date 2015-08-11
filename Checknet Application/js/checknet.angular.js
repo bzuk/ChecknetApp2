@@ -26,3 +26,8 @@ angular.module('checkApp', ['kendo.directives'])
         };
         $scope.hello = "Hello from controller";
     })
+
+function focusTextbox() {
+    $("#input").focus();
+}
+
