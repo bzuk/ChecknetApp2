@@ -1,49 +1,51 @@
 <kendo-mobile-view k-transition="'slide'">
     <kendo-mobile-header>
         <kendo-mobile-nav-bar class="km-accent">
-            <kendo-mobile-back-button k-align="'left'">Back</kendo-mobile-back-button>
+            <kendo-mobile-button k-align="'left'" href="#:back"><i class="ck-icon ck-barrow"></i></kendo-mobile-button>
             <kendo-view-title>Contact Us</kendo-view-title>
         </kendo-mobile-nav-bar>
     </kendo-mobile-header>
     <kendo-mobile-content>
-        <kendo-mobile-list-view class="km-no-border km-grey-box">
-            <li>
-                <kendo-mobile-button-group k-id="buttongroup-home" k-data-show="mobileSalesViewInit">
+        <kendo-mobile-list-view class="ck-grey-wrap ck-no-border">
+            <li class="ck-no-pad">
+                <kendo-mobile-button-group class="ck-group-full" k-id="buttongroup-home" k-data-show="mobileSalesViewInit">
                     <kendo-mobile-button class="km-state-active">United States</kendo-mobile-button>
-                    <kendo-mobile-button class="">Europe</kendo-mobile-button>
-                    <kendo-mobile-button class="">Asia</kendo-mobile-button>
+                    <kendo-mobile-button>Europe</kendo-mobile-button>
+                    <kendo-mobile-button>Asia</kendo-mobile-button>
                 </kendo-mobile-button-group>
             </li>
-            <li>
+            <li class="ck-center-li">
                 <i></i>
-                <kendo-mobile-button class="km-primary km-justified">Write Email</kendo-mobile-button>
+                <kendo-mobile-button class="km-primary km-large" style="width:90%;">Write Email</kendo-mobile-button>
             </li>
-        </kendo-mobile-list-view>
-        <kendo-mobile-list-view>
-            <kendo-mobile-collapsible k-icon-position="'right'" k-expand-icon="'plus'" k-collapse-icon="'minus'" k-collapsed="'true'" k-on-expand="OpenExpand()">
-                <h3>Checkpoint Systems
-                    Corporate Headquarters USA</h3>
+            <kendo-mobile-collapsible k-icon-position="'right'" k-expand-icon="'plus'" k-collapse-icon="'minus'" k-id="'collapsible'" k-collapsed="'false'" k-on-expand="OpenExpand()">
+                <h4>Checkpoint Systems
+                    Corporate Headquarters USA</h4>
                 <table class="match-details">
                     <tr>
                         <td>
                             <h4 class="km-bold-font">Address:</h4>
-                            <h4 class="km-light-font">101 Wolf Dr.</h4>
-                            <h4 class="km-light-font">P.O. Box 188</h4>
-                            <h4 class="km-light-font">Thorofare, NJ 08086</h4>
+                            <p>
+                                101 Wolf Dr.</br>
+                                P.O. Box 188</br>
+                                Thorofare, NJ 08086
+                            </p>
                             <h4 class="km-bold-font"> Phone:</h4>
-                            <h4 class="km-light-font">+1 (800) 257-5540</h4>
-                            <h4 class="km-light-font">+1 (856) 848-1800</h4>
-                            <h4 class="km-bold-font"> Fax:</h4>
-                            <h4 class="km-light-font">+1 (856) 848-0937</h4>
+                            <p>
+                                +1 (800) 257-5540</br>
+                                +1 (856) 848-1800
+                            </p>
+                            <h4 class="km-bold-font">Fax:</h4>
+                            <p>+1 (856) 848-0937</p>
                             <h4 class="km-bold-font"> E-Mail:</h4>
-                            <p><a href="#">Checknet@checkpt.com</a>
+                            <p><a href="mailto:checknet@checkpt.com">Checknet@checkpt.com</a>
                             </p>
                         </td>
                     </tr>
                 </table>
             </kendo-mobile-collapsible>
-            <kendo-mobile-collapsible k-mini="false" k-icon-position="'right'" k-expand-icon="'plus'" k-collapse-icon="'minus'" k-collapsed="true" k-on-expand="OpenExpand()">
-                <h3>Checknet Order Information/Order Status</h3>
+            <kendo-mobile-collapsible k-icon-position="'right'" k-expand-icon="'plus'" k-collapse-icon="'minus'" k-collapsed="true" k-on-expand="OpenExpand()">
+                <h4>Checknet Order Information/Order Status</h4>
                 <table class="match-details">
                     <tr>
                         <td>
@@ -52,13 +54,22 @@
                     </tr>
                 </table>
             </kendo-mobile-collapsible>
-   
-            <kendo-mobile-collapsible k-mini="false" k-icon-position="'right'" k-expand-icon="'plus'" k-collapse-icon="'minus'" k-collapsed="true" k-on-expand="OpenExpand()">
-                <h3>Help Desk</h3>
+            <kendo-mobile-collapsible k-icon-position="'right'" k-expand-icon="'plus'" k-collapse-icon="'minus'" k-collapsed="true" k-on-expand="OpenExpand()">
+                <h4>Credit & Collections Department</h4>
                 <table class="match-details">
                     <tr>
                         <td>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus sollicitudin nunc, ut auctor lectus scelerisque id. Duis semper, dui non iaculis placerat, enim orci venenatis enim, a laoreet turpis tellus a nulla. Suspendisse nec mi mattis, hendrerit magna eget, convallis quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla luctus hendrerit pellentesque. Aliquam dictum sodales velit eget hendrerit. Ut diam dui, maximus id nisi et, mattis condimentum nunc. Phasellus sollicitudin scelerisque lacus non placerat.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus sollicitudin nunc, ut auctor lectus scelerisque id. Duis semper, dui non iaculis placerat, enim orci venenatis enim, a laoreet turpis tellus a nulla. Suspendisse nec mi mattis, hendrerit magna eget, convallis quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla luctus hendrerit pellentesque. Aliquam dictum sodales velit eget hendrerit. Ut diam dui, maximus id nisi et, mattis condimentum nunc. Phasellus sollicitudin scelerisque lacus non placerat.</p>
+                        </td>
+                    </tr>
+                </table>
+            </kendo-mobile-collapsible>
+            <kendo-mobile-collapsible k-icon-position="'right'" k-expand-icon="'plus'" k-collapse-icon="'minus'" k-collapsed="true" k-on-expand="OpenExpand()">
+                <h4>Help Desk</h4>
+                <table class="match-details">
+                    <tr>
+                        <td>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus sollicitudin nunc, ut auctor lectus scelerisque id. Duis semper, dui non iaculis placerat, enim orci venenatis enim, a laoreet turpis tellus a nulla. Suspendisse nec mi mattis, hendrerit magna eget, convallis quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla luctus hendrerit pellentesque. Aliquam dictum sodales velit eget hendrerit. Ut diam dui, maximus id nisi et, mattis condimentum nunc. Phasellus sollicitudin scelerisque lacus non placerat.</p>
                         </td>
                     </tr>
                 </table>

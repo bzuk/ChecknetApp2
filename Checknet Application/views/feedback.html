@@ -1,22 +1,20 @@
-<kendo-mobile-view k-transition="'slide'">
+<kendo-mobile-view  k-transition="'slide'">
     <kendo-mobile-header>
         <kendo-mobile-nav-bar class="km-accent">
-            <kendo-mobile-back-button k-align="'left'">Back</kendo-mobile-back-button>
+             <kendo-mobile-button k-align="'left'" href="#:back"><i class="ck-icon ck-barrow"></i></kendo-mobile-button>
             <kendo-view-title>Feedback</kendo-view-title>
         </kendo-mobile-nav-bar>
     </kendo-mobile-header>
     <kendo-mobile-content>
-        <kendo-mobile-list-view k-style="'inset'">
-            <li>
-                
+        <kendo-mobile-list-view k-style="'inset'" class="ck-drkgrey-wrap ck-no-border">
+            <li> 
               <fieldset>
-                    <legend>Have something to share?</legend>
-                    <textarea style="height: 150px;">Let us know here</textarea>
+                    <textarea placeholder="Have something to share? Let us know here" style="height: 150px;"></textarea>
                 </fieldset>
             </li>
             <li>
             <i></i>
-                <kendo-mobile-button class="km-primary km-justified">Send</kendo-mobile-button>
+                <kendo-mobile-button class="km-primary km-large km-justified">SEND</kendo-mobile-button>
             </li>
         </kendo-mobile-list-view>
     </kendo-mobile-content>

@@ -1,0 +1,52 @@
+<kendo-mobile-view k-transition="'slide'">
+    <kendo-mobile-header>
+        <kendo-mobile-nav-bar class="km-accent">
+            <kendo-mobile-button k-align="'right'" k-transition="'fade'" href="#news-alerts"><i class="ck-icon ck-messages"></i>
+            </kendo-mobile-button>
+            <kendo-mobile-button href="views/main-menu.html" k-align="'left'"><i class="ck-icon ck-menu"></i>
+            </kendo-mobile-button>
+            <kendo-view-title><img src="styles/images/Checknet-title.png" style="width: 5em; height: .9em;" />
+            </kendo-view-title>
+        </kendo-mobile-nav-bar>
+    </kendo-mobile-header>
+    <kendo-mobile-content>
+        <kendo-mobile-list-view class="ck-grey-wrap ck-no-border">
+            <li class="ck-center-li">
+               <fieldset class="ck-login">
+                   <select id="dropdown">
+                            <option value="First Option">Meeting Room 1</option>
+                            <option value="Second Option">Meeting Room 2</option>
+                            <option value="Third Option">Meeting 3</option>
+                        </select>
+                        <input value="" placeholder="Password" type="text" class="ck-icon ck-password" />
+                   <i style="font-size: 150%;" class="ck-input-btn ck-icon ck-password"></i>
+                    </fieldset>
+            </li>
+            <kendo-mobile-collapsible k-icon-position="'right'" k-expand-icon="'plus'" k-collapse-icon="'minus'" k-id="'collapsible'" k-collapsed="'false'" k-on-expand="OpenExpand()">
+                <h4>TJMAXX</h4>
+                <table class="match-details">
+                    <tr>
+                        <td>
+                           <kendo-mobile-button-group class="ck-group-full" k-id="buttongroup-home" k-data-show="mobileSalesViewInit">
+                    <kendo-mobile-button class="km-state-active">United States</kendo-mobile-button>
+                    <kendo-mobile-button>Europe</kendo-mobile-button>
+                    <kendo-mobile-button>Asia</kendo-mobile-button>
+                </kendo-mobile-button-group>
+                        </td>
+                    </tr>
+                </table>
+            </kendo-mobile-collapsible>
+            <kendo-mobile-collapsible k-icon-position="'right'" k-expand-icon="'plus'" k-collapse-icon="'minus'" k-collapsed="true" k-on-expand="OpenExpand()">
+                <h4>HomeGoods</h4>
+                <table class="match-details">
+                    <tr>
+                        <td>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus sollicitudin nunc, ut auctor lectus scelerisque id. Duis semper, dui non iaculis placerat, enim orci venenatis enim, a laoreet turpis tellus a nulla. Suspendisse nec mi mattis, hendrerit magna eget, convallis quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla luctus hendrerit pellentesque. Aliquam dictum sodales velit eget hendrerit. Ut diam dui, maximus id nisi et, mattis condimentum nunc. Phasellus sollicitudin scelerisque lacus non placerat.</p>
+                        </td>
+                    </tr>
+                </table>
+            </kendo-mobile-collapsible>
+        </kendo-mobile-list-view>
+          <!-- End Home View -->
+    </kendo-mobile-content>
+</kendo-mobile-view>

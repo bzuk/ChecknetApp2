@@ -52,7 +52,7 @@
                 </li>
                 <li>
                     <i></i>
-                    <kendo-mobile-button class="km-primary km-large km-justified">Log In</kendo-mobile-button>
+                    <kendo-mobile-button class="km-primary km-large km-justified"  k-transition="'fade'" href="views/home.html">Log In</kendo-mobile-button>
                 </li>
             </ul>
         </form>
@@ -82,6 +82,28 @@
             </div>
         </div>
         <!-- End Forgot Password View -->
+                <div kendo-mobile-modal-view id="news-alerts" k-transition="'overlay:up'" class="km-moduleview" style="width: 90%; background:rgba(255, 255, 255, 0);">
+            <ul kendo-mobile-list-view style="padding-bottom: 1em;" class="ck-module-wrap ck-no-border" k-style="'inset'">
+                <li>
+                    <h2 class="km-bold-font">Forgot Your Password?</h2>
+                    <p>
+                        Please enter your email address to receive a new password.
+                    </p>
+                </li>
+                <li class="ck-no-pad">
+                    <fieldset class="ck-login">
+                        <input value="" placeholder="your@email.com" type="text" />
+                    </fieldset>
+                    <i></i>
+                    <kendo-mobile-button class="km-primary km-large km-justified" style="margin-bottom: 1.3rem;">Send New Password</kendo-mobile-button>
+                </li>
+            </ul>
+            <div kendo-mobile-footer>
+                <kendo-mobile-button href="#login" k-transition="'overlay:down'" class="ck-close-btn km-justified"><img src="styles/images/close-button.png" style="width: 3.5em; height: 3.5em;" />
+                </kendo-mobile-button>
+            </div>
+        </div>
+        <!-- End Module View -->
         
 </body>
 
