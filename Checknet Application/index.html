@@ -30,13 +30,25 @@
                 </kendo-mobile-button>
             </kendo-mobile-nav-bar>
         </kendo-mobile-header>
-        <!-- End Header -->
     </kendo-mobile-layout>
-    <!-- End Layout -->
+    <!-- End Default Layout -->
+    <kendo-mobile-layout k-id="'home'">
+        <kendo-mobile-header>
+            <kendo-mobile-nav-bar class="km-accent">
+                <kendo-mobile-button k-align="'right'" k-transition="'fade'" href="#news-alerts"><i class="ck-icon ck-messages"></i>
+                </kendo-mobile-button>
+                <kendo-mobile-button href="views/main-menu.html" k-align="'left'"><i class="ck-icon ck-menu"></i>
+                </kendo-mobile-button>
+                <kendo-view-title><img src="styles/images/Checknet-title.png" style="width: 5em; height: .9em;" />
+                </kendo-view-title>
+            </kendo-mobile-nav-bar>
+        </kendo-mobile-header>
+    </kendo-mobile-layout>
+    <!-- End Home Layout -->
     <kendo-mobile-view id="login" k-title="'Login'" k-layout="'default'">
         <img src="styles/images/Checknet-Logo.png" class="ck-login-logo" />
         <form>
-            <ul kendo-mobile-list-view k-style="'inset'" ng-controller="index" class="ck-grey-wrap ck-no-border">
+            <ul kendo-mobile-list-view k-style="'inset'" class="ck-grey-wrap ck-no-border">
                 <li> <span class="ck-switchpad-right"><p>Remember Me</p></span>
                     <input kendo-mobile-switch k-id="email-switch" k-checked="checked" />
                 </li>
@@ -46,65 +58,45 @@
                         <input value="" placeholder="Password" type="password" />
                         <kendo-mobile-button class="ck-input-btn" k-rel="'modalview'" href="#modalview-password"><i style="font-size: 150%;" class="ck-icon ck-password"></i>
                         </kendo-mobile-button>
-                        <p class="ck-align-right"><a id="touchSurface"  data-tap="myTouch.tap" href="#">Show Password Hint</a>
+                        <p class="ck-align-right"><a id="touchSurface" data-tap="myTouch.tap" href="#">Show Password Hint</a>
                         </p>
                     </fieldset>
                 </li>
                 <li>
                     <i></i>
-                    <kendo-mobile-button class="km-primary km-large km-justified"  k-transition="'fade'" href="views/home.html">Log In</kendo-mobile-button>
+                    <kendo-mobile-button class="km-primary km-large km-justified" k-transition="'fade'" href="views/home.html">Log In</kendo-mobile-button>
                 </li>
             </ul>
         </form>
-        <!-- End Form Area -->
         <p class="ck-disclamier km-style-info">This app contains confidential and proprietary information. This information is provided for the benefit of authorized users only. Unauthorized access to information on this system may result in criminal and/or civil prosecution. All accesses are logged and this information will be used to support any prosecution. </p>
         <p class="ck-disclamier km-style-info">Material contained on this app is Copyright ©2001-2015 Checkpoint Systems, Inc.</p>
-        <!-- End Login View -->
-        <div kendo-mobile-modal-view id="modalview-password" k-transition="'overlay:up'" class="km-moduleview" style="width: 90%; background:rgba(255, 255, 255, 0);">
-            <ul kendo-mobile-list-view style="padding-bottom: 1em;" class="ck-module-wrap ck-no-border" k-style="'inset'">
-                <li>
-                    <h2 class="km-bold-font">Forgot Your Password?</h2>
-                    <p>
-                        Please enter your email address to receive a new password.
-                    </p>
-                </li>
-                <li class="ck-no-pad">
-                    <fieldset class="ck-login">
-                        <input value="" placeholder="your@email.com" type="text" />
-                    </fieldset>
-                    <i></i>
-                    <kendo-mobile-button class="km-primary km-large km-justified" style="margin-bottom: 1.3rem;">Send New Password</kendo-mobile-button>
-                </li>
-            </ul>
-            <div kendo-mobile-footer>
-                <kendo-mobile-button href="#login" k-transition="'overlay:down'" class="ck-close-btn km-justified"><img src="styles/images/close-button.png" style="width: 3.5em; height: 3.5em;" />
-                </kendo-mobile-button>
-            </div>
-        </div>
-        <!-- End Forgot Password View -->
-                <div kendo-mobile-modal-view id="news-alerts" k-transition="'overlay:up'" class="km-moduleview" style="width: 90%; background:rgba(255, 255, 255, 0);">
-            <ul kendo-mobile-list-view style="padding-bottom: 1em;" class="ck-module-wrap ck-no-border" k-style="'inset'">
-                <li>
-                    <h2 class="km-bold-font">Forgot Your Password?</h2>
-                    <p>
-                        Please enter your email address to receive a new password.
-                    </p>
-                </li>
-                <li class="ck-no-pad">
-                    <fieldset class="ck-login">
-                        <input value="" placeholder="your@email.com" type="text" />
-                    </fieldset>
-                    <i></i>
-                    <kendo-mobile-button class="km-primary km-large km-justified" style="margin-bottom: 1.3rem;">Send New Password</kendo-mobile-button>
-                </li>
-            </ul>
-            <div kendo-mobile-footer>
-                <kendo-mobile-button href="#login" k-transition="'overlay:down'" class="ck-close-btn km-justified"><img src="styles/images/close-button.png" style="width: 3.5em; height: 3.5em;" />
-                </kendo-mobile-button>
-            </div>
-        </div>
-        <!-- End Module View -->
-        
+    </kendo-mobile-view>
+    <!-- End Login View -->
+    <kendo-mobile-modal-view id="modalview-password" k-transition="'fade'" class="km-moduleview" style="width: 90%; background:rgba(255, 255, 255, 0);">
+        <kendo-mobile-header>
+            <kendo-mobile-nav-bar class="km-dark"><img src="styles/images/blank.png" style="width: 5em; height: .9em;" /></kendo-mobile-nav-bar>
+        </kendo-mobile-header>
+        <ul kendo-mobile-list-view style="padding-bottom: 1em;" class="ck-module-wrap ck-no-border" k-style="'inset'">
+            <li>
+                <h2 class="km-bold-font">Forgot Your Password?</h2>
+                <p>
+                    Please enter your email address to receive a new password.
+                </p>
+            </li>
+            <li class="ck-no-pad">
+                <fieldset class="ck-login">
+                    <input value="" placeholder="your@email.com" type="text" />
+                </fieldset>
+                <i></i>
+                <kendo-mobile-button class="km-primary km-large km-justified" style="margin-bottom: 1.3rem;">Send New Password</kendo-mobile-button>
+            </li>
+        </ul>
+        <kendo-mobile-footer>
+            <kendo-mobile-button href="#login" k-transition="'overlay:down'" class="ck-close-btn km-justified"><img src="styles/images/close-button.png" style="width: 3.5em; height: 3.5em;" />
+            </kendo-mobile-button>
+        </kendo-mobile-footer>
+        </kendo-mobile-module-view>
+        <!-- End Module Forgot Password View -->
 </body>
 
 </html>
